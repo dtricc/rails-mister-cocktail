@@ -1,0 +1,13 @@
+<%= simple_form_for [@cocktail, @dose] do |c| %>
+  <%= c.label :amount, 'Please enter the amount' %>
+  <%= c.text_field :amount %>
+  <%= c.label :description, 'Please enter the description' %>
+  <%= c.text_field :description %>
+  <%= c.label 'Please enter the ingredients' %>
+  <%= c.input_field :ingredient_id, collection: @ingredients %>
+  <%= c.submit "add this dose", class: "btn btn-primary" %>
+<% end %>
+<br>
+
+
+
