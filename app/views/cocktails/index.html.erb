@@ -9,9 +9,14 @@
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
         <% @cocktails.each do |cocktail| %>
+        <% if cocktail.photo.present? %>
           <h2><%= cocktail.name %></h2>
           <%= link_to cocktail_path(cocktail) do %>
           <p class="cocktail-link"><%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :thumb %></h2>
+            <% else %>
+            <%= link_to cocktail_path(cocktail) do %>
+          <p class="cocktail-link"></h2>
+        <% end %>
         <% end %>
         <% end %>
       </div>
