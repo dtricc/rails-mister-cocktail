@@ -7,8 +7,9 @@
           <p><%= link_to "Delete #{dose.ingredient.name}", dose_path(dose), method: :delete %></p>
         <% end %>
       <br>
-        <%= link_to 'add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-        <%= link_to 'back to overview', cocktails_path, class: "btn btn-primary" %>
+        <p><%= link_to 'add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
+        <p><%= link_to 'back to overview', cocktails_path, class: "btn btn-primary" %></p>
+        <p><%= link_to 'Delete this cocktail', cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %></p>
     </div>
   </div>
 </div>

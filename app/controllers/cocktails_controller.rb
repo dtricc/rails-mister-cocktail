@@ -1,31 +1,34 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :set_cocktail, only: [:show, :edit, :update]
 
-  def index         # GET /cocktails
+  def index
     @cocktails = Cocktail.all
   end
 
-  def show          # GET /cocktails/:id
+  def show
   # raise
   end
 
-  def new           # GET /cocktails/new
+  def new
     @cocktail = Cocktail.new
   end
 
-  def create        # POST /cocktails
+  def create
     @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
     redirect_to cocktail_path(@cocktail)
   end
 
-  def edit          # GET /cocktails/:id/edit
+  def edit
   end
 
-  def update        # PATCH /cocktails/:id
+  def update
   end
 
-  def destroy       # DELETE /cocktails/:id
+  def destroy
+    @cocktail = Cocktail.find(params[:id])     # DELETE /cocktails/:id
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
   private

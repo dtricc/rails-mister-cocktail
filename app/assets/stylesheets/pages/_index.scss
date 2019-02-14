@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  background-image: asset-url('bar.jpg');
+  background-size: cover;
+  height: 200px;
+  text-align: center;
+  color: $light-gray;
+  }
+
+
+
