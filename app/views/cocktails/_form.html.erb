@@ -1,7 +1,13 @@
 <%= simple_form_for(@cocktail) do |c| %>
   <%= c.label :name, 'Please enter the name of your cocktail' %>
   <%= c.text_field :name %>
-  <%= c.input :photo %>
   <%= c.input :photo_cache, as: :hidden %>
+  <label class="btn btn-primary">
+  Add a photo!
+  <span style="display:none;">
+    <%= c.input :photo, required: true, multiple: true, name: 'picture' %>
+  </span>
+</label>
+
   <%= c.submit %>
 <% end %>
