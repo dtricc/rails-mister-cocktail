@@ -1,13 +1,39 @@
 // Import page-specific CSS files here.
 @import "home";
 
-body {
-  background-image: asset-url('bar.jpg');
-  background-size: cover;
-  height: 200px;
+.index {
   text-align: center;
-  color: $light-gray;
+  color: #FCFEFF;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,1)),
+  asset-url('bar.jpg');
+  background-size: cover;
+  padding: 30px;
+  background-repeat: repeat-y;
+  z-index: -1;
   }
 
+h1 {
+  font-family: 'Handlee', cursive;
+  font-size: 60px;
+}
 
+p.small-title {
+  font-size: 15px;
+  font-style: italic;
+  justify-content: center;
+}
 
+p.cocktail-link:hover {
+  -webkit-transform: scale(1.15);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+}
+
+p.cocktail-link:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+img {
+  border-radius: 10px;
+}
